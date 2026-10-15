@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0018-4sum](https://github.com/prashant0075/DSA/tree/master/0018-4sum) |
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/prashant0075/DSA/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 ## Binary Search
 |  |
 | ------- |
@@ -17,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0142-linked-list-cycle-ii](https://github.com/prashant0075/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/prashant0075/DSA/tree/master/0160-intersection-of-two-linked-lists) |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 ## Linked List
 |  |
 | ------- |
@@ -56,4 +58,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
+## Binary Indexed Tree
+|  |
+| ------- |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
+## Segment Tree
+|  |
+| ------- |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 <!---LeetCode Topics End-->
