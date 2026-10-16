@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/prashant0075/DSA/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
+| [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/prashant0075/DSA/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 ## Binary Search
 |  |
 | ------- |
@@ -19,6 +20,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0142-linked-list-cycle-ii](https://github.com/prashant0075/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/prashant0075/DSA/tree/master/0160-intersection-of-two-linked-lists) |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
+| [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/prashant0075/DSA/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 ## Linked List
 |  |
 | ------- |
@@ -62,8 +64,10 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
+| [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/prashant0075/DSA/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 ## Segment Tree
 |  |
 | ------- |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
+| [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/prashant0075/DSA/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 <!---LeetCode Topics End-->
