@@ -1,60 +1,78 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Solution {
     private static final long MOD = 1000000007;
-    private long[][] combinations;
+    private long[] fact;
+    private long[] invFact;
 
     public int numOfWays(int[] nums) {
         int n = nums.length;
         
-        // Precompute combinations (nCr) using Pascal's Triangle
-        combinations = new long[n][n];
-        for (int i = 0; i < n; i++) {
-            combinations[i][0] = 1;
-            combinations[i][i] = 1;
-            for (int j = 1; j < i; j++) {
-                combinations[i][j] = (combinations[i - 1][j - 1] + combinations[i - 1][j]) % MOD;
-            }
+        // 1. Precompute factorials and inverse factorials for O(1) combinations
+        fact = new long[n + 1];
+        invFact = new long[n + 1];
+        fact[0] = 1;
+        invFact[0] = 1;
+        
+        for (int i = 1; i <= n; i++) {
+            fact[i] = (fact[i - 1] * i) % MOD;
+            invFact[i] = power(fact[i], MOD - 2); // Fermat's Little Theorem
         }
         
-        List<Integer> list = new ArrayList<>();
-        for (int num : nums) {
-            list.add(num);
+        return (int) ((dfs(nums) - 1 + MOD) % MOD);
+    }
+    
+    // Fast exponentiation to calculate modular inverse
+    private long power(long base, long exp) {
+        long res = 1;
+        base %= MOD;
+        while (exp > 0) {
+            if ((exp & 1) == 1) res = (res * base) % MOD;
+            base = (base * base) % MOD;
+            exp >>= 1;
         }
-        
-        // Subtract 1 because we want the number of *other* ways
-        return (int) ((dfs(list) - 1 + MOD) % MOD);
+        return res;
     }
 
-    private long dfs(List<Integer> list) {
-        // Base case: arrays of length 0, 1, or 2 only have 1 valid arrangement
-        if (list.size() <= 2) {
-            return 1;
+    // O(1) combination formula using precomputed arrays: nCr = n! / (r! * (n-r)!)
+    private long getCombination(int n, int r) {
+        if (r < 0 || r > n) return 0;
+        long res = fact[n];
+        res = (res * invFact[r]) % MOD;
+        res = (res * invFact[n - r]) % MOD;
+        return res;
+    }
+
+    private long dfs(int[] arr) {
+        int n = arr.length;
+        // Base case
+        if (n <= 2) return 1;
+        
+        int root = arr[0];
+        
+        // 2. Count left elements to allocate exact primitive arrays (avoids ArrayList overhead)
+        int leftCount = 0;
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < root) leftCount++;
         }
         
-        int root = list.get(0);
-        List<Integer> left = new ArrayList<>();
-        List<Integer> right = new ArrayList<>();
+        int[] left = new int[leftCount];
+        int[] right = new int[n - 1 - leftCount];
+        int l = 0, r = 0;
         
-        // Divide remaining elements into left and right subtrees
-        for (int i = 1; i < list.size(); i++) {
-            if (list.get(i) < root) {
-                left.add(list.get(i));
+        // Distribute elements
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < root) {
+                left[l++] = arr[i];
             } else {
-                right.add(list.get(i));
+                right[r++] = arr[i];
             }
         }
         
-        // Recursively find the number of ways for left and right subtrees
+        // Recursion
         long leftWays = dfs(left);
         long rightWays = dfs(right);
         
-        int lLen = left.size();
-        int rLen = right.size();
-        
-        // Total ways = C(lLen + rLen, lLen) * leftWays * rightWays
-        long totalWays = combinations[lLen + rLen][lLen];
+        // Calculate permutations for the current subtree
+        long totalWays = getCombination(n - 1, leftCount);
         totalWays = (totalWays * leftWays) % MOD;
         totalWays = (totalWays * rightWays) % MOD;
         
