@@ -1,81 +1,68 @@
 class Solution {
-    private static final long MOD = 1000000007;
-    private long[] fact;
-    private long[] invFact;
+    private static final int MOD = 1000000007;
 
     public int numOfWays(int[] nums) {
         int n = nums.length;
-        
-        // 1. Precompute factorials and inverse factorials for O(1) combinations
-        fact = new long[n + 1];
-        invFact = new long[n + 1];
-        fact[0] = 1;
-        invFact[0] = 1;
-        
-        for (int i = 1; i <= n; i++) {
-            fact[i] = (fact[i - 1] * i) % MOD;
-            invFact[i] = power(fact[i], MOD - 2); // Fermat's Little Theorem
-        }
-        
-        return (int) ((dfs(nums) - 1 + MOD) % MOD);
-    }
-    
-    // Fast exponentiation to calculate modular inverse
-    private long power(long base, long exp) {
-        long res = 1;
-        base %= MOD;
-        while (exp > 0) {
-            if ((exp & 1) == 1) res = (res * base) % MOD;
-            base = (base * base) % MOD;
-            exp >>= 1;
-        }
-        return res;
-    }
+        // Arrays of length 1 or 2 can only be formed in 1 way, so 0 *other* ways
+        if (n <= 2) return 0; 
 
-    // O(1) combination formula using precomputed arrays: nCr = n! / (r! * (n-r)!)
-    private long getCombination(int n, int r) {
-        if (r < 0 || r > n) return 0;
-        long res = fact[n];
-        res = (res * invFact[r]) % MOD;
-        res = (res * invFact[n - r]) % MOD;
-        return res;
-    }
+        // 1. Array-based BST representation (Extremely fast, 0 object allocation overhead)
+        int[] left = new int[n + 1];
+        int[] right = new int[n + 1];
+        int[] size = new int[n + 1];
 
-    private long dfs(int[] arr) {
-        int n = arr.length;
-        // Base case
-        if (n <= 2) return 1;
-        
-        int root = arr[0];
-        
-        // 2. Count left elements to allocate exact primitive arrays (avoids ArrayList overhead)
-        int leftCount = 0;
+        int root = nums[0];
+        size[root] = 1;
+
+        // Build the BST and track subtree sizes
         for (int i = 1; i < n; i++) {
-            if (arr[i] < root) leftCount++;
-        }
-        
-        int[] left = new int[leftCount];
-        int[] right = new int[n - 1 - leftCount];
-        int l = 0, r = 0;
-        
-        // Distribute elements
-        for (int i = 1; i < n; i++) {
-            if (arr[i] < root) {
-                left[l++] = arr[i];
-            } else {
-                right[r++] = arr[i];
+            int val = nums[i];
+            int curr = root;
+            
+            while (true) {
+                size[curr]++; // val will be a child of curr, so increase curr's size
+                
+                if (val < curr) {
+                    if (left[curr] == 0) {
+                        left[curr] = val;
+                        size[val] = 1;
+                        break;
+                    } else {
+                        curr = left[curr];
+                    }
+                } else {
+                    if (right[curr] == 0) {
+                        right[curr] = val;
+                        size[val] = 1;
+                        break;
+                    } else {
+                        curr = right[curr];
+                    }
+                }
             }
         }
+
+        // 2. Precompute Modular Inverses in strictly O(N) time
+        long[] inv = new long[n + 1];
+        inv[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            inv[i] = MOD - (MOD / i) * inv[(int)(MOD % i)] % MOD;
+        }
+
+        long ans = 1;
         
-        // Recursion
-        long leftWays = dfs(left);
-        long rightWays = dfs(right);
-        
-        // Calculate permutations for the current subtree
-        long totalWays = getCombination(n - 1, leftCount);
-        totalWays = (totalWays * leftWays) % MOD;
-        totalWays = (totalWays * rightWays) % MOD;
-        
-        return totalWays;
+        // 3. Compute formula: N! / Product(size[i])
+        for (int i = 1; i <= n; i++) {
+            // Multiply by i to build N!
+            ans = (ans * i) % MOD;
+            
+            // Divide by size[i] using the precomputed modular inverse
+            if (size[i] > 1) { // Skip size 1 to save micro-operations
+                ans = (ans * inv[size[i]]) % MOD;
+            }
+        }
+
+        // Subtract 1 because the problem asks for the number of *other* ways
+        return (int) ((ans - 1 + MOD) % MOD);
     }
 }
