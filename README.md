@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
 | [2916-subarrays-distinct-element-sum-of-squares-ii](https://github.com/prashant0075/DSA/tree/master/2916-subarrays-distinct-element-sum-of-squares-ii) |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/prashant0075/DSA/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
+| [3886-sum-of-sortable-integers](https://github.com/prashant0075/DSA/tree/master/3886-sum-of-sortable-integers) |
 ## Binary Search
 |  |
 | ------- |
@@ -44,6 +45,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/prashant0075/DSA/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [3723-maximize-sum-of-squares-of-digits](https://github.com/prashant0075/DSA/tree/master/3723-maximize-sum-of-squares-of-digits) |
+| [3886-sum-of-sortable-integers](https://github.com/prashant0075/DSA/tree/master/3886-sum-of-sortable-integers) |
 ## Greedy
 |  |
 | ------- |
@@ -60,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
 | [2089-find-target-indices-after-sorting-array](https://github.com/prashant0075/DSA/tree/master/2089-find-target-indices-after-sorting-array) |
 | [3551-minimum-swaps-to-sort-by-digit-sum](https://github.com/prashant0075/DSA/tree/master/3551-minimum-swaps-to-sort-by-digit-sum) |
+| [3886-sum-of-sortable-integers](https://github.com/prashant0075/DSA/tree/master/3886-sum-of-sortable-integers) |
 ## Quicksort
 |  |
 | ------- |
@@ -114,4 +117,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/prashant0075/DSA/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
+## Enumeration
+|  |
+| ------- |
+| [3886-sum-of-sortable-integers](https://github.com/prashant0075/DSA/tree/master/3886-sum-of-sortable-integers) |
 <!---LeetCode Topics End-->
