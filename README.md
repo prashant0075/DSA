@@ -7,6 +7,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0015-3sum](https://github.com/prashant0075/DSA/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/prashant0075/DSA/tree/master/0018-4sum) |
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
+| [0128-longest-consecutive-sequence](https://github.com/prashant0075/DSA/tree/master/0128-longest-consecutive-sequence) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/prashant0075/DSA/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/prashant0075/DSA/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 | [2089-find-target-indices-after-sorting-array](https://github.com/prashant0075/DSA/tree/master/2089-find-target-indices-after-sorting-array) |
@@ -22,6 +23,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/prashant0075/DSA/tree/master/0128-longest-consecutive-sequence) |
 | [0142-linked-list-cycle-ii](https://github.com/prashant0075/DSA/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/prashant0075/DSA/tree/master/0160-intersection-of-two-linked-lists) |
 | [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/prashant0075/DSA/tree/master/2913-subarrays-distinct-element-sum-of-squares-i) |
@@ -96,6 +98,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Union-Find
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/prashant0075/DSA/tree/master/0128-longest-consecutive-sequence) |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/prashant0075/DSA/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
 ## Binary Search Tree
 |  |
