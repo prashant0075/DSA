@@ -9,6 +9,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/prashant0075/DSA/tree/master/0039-combination-sum) |
 | [0075-sort-colors](https://github.com/prashant0075/DSA/tree/master/0075-sort-colors) |
 | [0128-longest-consecutive-sequence](https://github.com/prashant0075/DSA/tree/master/0128-longest-consecutive-sequence) |
+| [0485-max-consecutive-ones](https://github.com/prashant0075/DSA/tree/master/0485-max-consecutive-ones) |
 | [0704-binary-search](https://github.com/prashant0075/DSA/tree/master/0704-binary-search) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/prashant0075/DSA/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1569-number-of-ways-to-reorder-array-to-get-same-bst](https://github.com/prashant0075/DSA/tree/master/1569-number-of-ways-to-reorder-array-to-get-same-bst) |
